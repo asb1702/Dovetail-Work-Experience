@@ -1,0 +1,163 @@
+import React from 'react';
+import './App.scss';
+
+function App() {
+  return (
+    
+
+    <div className="container-fluid"> 
+    
+    <div className="lBanner row">
+        <a href = "https://dovetailgames.com/"><img className = "logo" width = "150px" height = "50px" 
+          src = "https://s3-eu-west-1.amazonaws.com/assets.dovetailgames.com/wp-content/uploads/2019/02/20171828/cropped-Dovetail_stack_flat_greytext11-300x98.png">
+          </img></a>
+        <a href = "https://live.dovetailgames.com/"><img className = "logo" width = "100px" height = "50px"
+          src = "https://live.dovetailgames.com/images/franchise_banner_live_tagline_2.png">
+          </img></a> 
+        <a href = "https://live.dovetailgames.com/auth/login?returnPath=/"><button className = "button1 login">Log in to Dovetail Live</button></a>
+    </div>
+
+      <div className="sBanner row " >
+        <button className = "button2 nav"><span>My Stats</span></button>
+        <button className = "button2 nav"><span>News</span></button>
+        <button className = "button2 nav"><span>Things</span></button>
+        <button className = "button2 nav"><span>More things</span></button>
+      </div>
+
+      <div className="sBanner row">
+      <a href = "#"><img className = "logo" height = "70px" width = "140px"src = "https://i2.wp.com/www.glitchfreegaming.com/wp-content/uploads/2016/02/DTGFS_Logo_Blue.png"></img></a>
+        <button width = "50%"  className = "button1 margin">FAQ</button>
+        <button className = "button3 submit"><span>Submit a video</span></button>
+      </div>
+
+
+     <a href = "#"> <button className = "back">Back</button></a>
+     <div className = "col-sm-7">
+    <div className="lVideo">
+    <iframe width = {lVideo.width} height = {lVideo.height}
+      src = {lVideo.videoId}>
+        </iframe>
+    </div>
+    <div className = "lText">
+      <h5><small>Created by:</small> {lVideo.creator}</h5>
+      <h2>{lVideo.title}</h2>
+      <p></p>
+      <hr></hr>
+      <p>Channel: {lVideo.channel}</p>
+    </div> 
+    </div>
+    <div className = "miniVids col-sm-5" width = "50%" height = "600px" float = "right">
+      <a href = "#"><button className = "button3">Featured Content</button></a>
+      <div className="sVideo">
+      <a href = "0"><img width = {sVideo1.width} height = {sVideo1.height}
+            src = {sVideo1.thumbnailUrl}>
+          </img></a>
+          </div>
+        <div className = "sText">
+          <h4>{sVideo1.title}</h4>
+          <p><small>By: </small>{sVideo1.creator}</p>
+          <p>Channel: {sVideo1.channel}</p>
+        </div>
+      <div className="sVideo">
+      <a href = "#"><img width = {sVideo2.width} height = {sVideo2.height}
+            src = {sVideo2.thumbnailUrl}>
+          </img></a>
+      </div>
+      <div className = "sText">
+          <h4>{sVideo2.title}</h4>
+          <p><small>By: </small>{sVideo2.creator}</p>
+          <p>Channel: {sVideo2.channel}</p>
+        </div>
+      <div className="sVideo">
+      <a href = "#"><img width = {sVideo3.width} height = {sVideo3.height}
+            src = {sVideo3.thumbnailUrl}>
+          </img></a>
+          </div>
+          <div className = "sText">
+          <h4>{sVideo3.title}</h4>
+          <p><small>By: </small>{sVideo3.creator}</p>
+          <p>Channel: {sVideo3.channel}</p>
+        </div>
+
+    </div>
+
+    <footer className = "topFooter row">
+        <button className = "button1"  >Support
+        </button>
+        <button className = "button1">FAQ
+        </button>
+          < a href = "https://www.facebook.com/dovetailgames/"><img className = "socials"src = "https://cdn2.iconfinder.com/data/icons/black-white-social-media/32/facebook_online_social_media-128.png"></img></a>
+          <a href = "https://www.instagram.com/dovetailgames/?hl=en"><img className = "socials"src = "https://cdn2.iconfinder.com/data/icons/black-white-social-media/32/instagram_online_social_media-128.png"></img></a>
+          <a href = "https://twitter.com/dovetailgames?lang=en"><img className = "socials"src = "https://cdn2.iconfinder.com/data/icons/black-white-social-media/32/online_social_media_twitter-128.png"></img></a>
+          <a href = "https://www.youtube.com/channel/UCMhnBf1MhYYmUWOmGQPY2cQ"><img className = "socials"src = "https://cdn2.iconfinder.com/data/icons/black-white-social-media/32/youtube_online_social_media-128.png"></img></a>
+          <a href = "https://www.reddit.com/r/trainsim/"><img className = "socials"src = "https://cdn2.iconfinder.com/data/icons/black-white-social-media/32/online_social_media_reddit-128.png"></img></a>
+          <a href = "https://forums.dovetailgames.com/"><img className = "socials"src = "https://cdn2.iconfinder.com/data/icons/black-white-social-media/32/we_chat_social_media-128.png"></img></a>
+
+    <div id = "bottomFooter">
+    <img width = "150px" height = "150px" src = "http://g3nx.com/wp-content/uploads/2017/11/Xbox-PNG-Photo-350x350.png"></img>
+    </div>
+    </footer>
+</div>
+         
+
+    //container end
+  );
+}
+const lVideo = {
+  title: 'Fishing Sim World Gameplay Trailer',
+  thumbnailUrl: 'http://i3.ytimg.com/vi/15lNFsO_dC4/maxresdefault.jpg',
+  videoId: 'https://www.youtube.com/embed/15lNFsO_dC4',
+  creator: 'DTG_01',
+    channel: 'Top Trailers Today',
+    votes: '406',
+  platform: 'PC',
+  date: '26 Jul 2019',
+  isFeaturedItem: true,
+  width: "100%",
+  height: "500px",
+
+};
+const sVideo1 = {
+  title: 'Train Sim World 2020 Cinematic Trailer',
+  thumbnailUrl: 'http://i3.ytimg.com/vi/CNqlXoDcH7A/maxresdefault.jpg',
+  videoId: 'https://www.youtube.com/embed/CNqlXoDcH7A',
+  creator: 'Bob Ross',
+  channel: 'Dovetail Trailers',
+  votes: '893',
+  platform: 'Xbox',
+  date: '1 Aug 2019',
+  isFeaturedItem: true,
+  width: "100%",
+  height: "280px",
+
+}
+const sVideo2 = {
+  title: 'Fishing Sim World Launch Trailer',
+  thumbnailUrl: 'http://i3.ytimg.com/vi/kOVbhhrrfZI/maxresdefault.jpg',
+  videoId: 'https://www.youtube.com/embed/kOVbhhrrfZI',
+  creator: 'Fish4Lyfe',
+  channel: 'Dovetail Trailers',
+  votes: '193',
+  platform: 'PS4',
+  date: '17 Feb 2018',
+  isFeaturedItem: false,
+  width: "100%",
+  height: "280px",
+
+}
+const sVideo3 = {
+  title: 'Tees Valley Line OUT NOW',
+  thumbnailUrl: 'http://i3.ytimg.com/vi/8PbzaAJpTTw/maxresdefault.jpg',
+  videoId: 'https://www.youtube.com/embed/8PbzaAJpTTw',
+  creator: 'D4v3',
+  channel: 'Content Collector',
+  votes: '',
+  platform: '',
+  date: '',
+  isFeaturedItem: false,
+  width: "100%",
+  height: "280px",
+
+}
+
+export default App;

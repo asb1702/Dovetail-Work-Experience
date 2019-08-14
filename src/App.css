@@ -1,33 +1,121 @@
-.App {
-  text-align: center;
-}
+.navbar {
+  margin-bottom: 15px;
+  border: none; }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
+.nav-link:hover {
+  color: white !important;
+  transition: 0.5s; }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+.footer {
+  background-color: #343a40; }
 
-.App-link {
-  color: #61dafb;
-}
+.bold {
+  font-weight: bold; }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+.btn-info {
+  background-color: white;
+  color: #5cd1ff;
+  border: none;
+  margin-top: -2px;
+  transition: 0.3s;
+  margin-left: 20px;
+  padding-top: 12px;
+  text-align: center; }
+  .btn-info:hover {
+    border: 1.5px #5cd1ff solid;
+    background-color: white;
+    color: #5cd1ff; }
+
+.featured {
+  margin: 20px 0 20px 18%; }
+
+.btn-secondary {
+  padding: 15px 8px 15px 8px;
+  margin-right: 20px;
+  margin-left: 20px;
+  border: none; }
+  .btn-secondary:hover {
+    border: none; }
+
+.vid:hover {
+  outline: #5cd1ff solid;
+  cursor: pointer; }
+
+.left {
+  margin-left: 250px !important; }
+
+.btn-arrow {
+  transition: 0.3s;
+  margin-left: 60px;
+  color: white; }
+  .btn-arrow span {
+    cursor: pointer;
+    position: relative;
+    transition: 0.3s;
+    color: white; }
+    .btn-arrow span:after {
+      position: absolute;
+      opacity: 0;
+      transition: 0.3s; }
+    .btn-arrow span:hover:after {
+      opacity: 1; }
+
+.btn-arrow-r span {
+  padding-right: 30px; }
+  .btn-arrow-r span:after {
+    content: '\00bb';
+    right: 5px; }
+  .btn-arrow-r span:hover {
+    padding-right: 30px; }
+
+.btn-arrow-l span {
+  padding-left: 30px; }
+  .btn-arrow-l span:after {
+    content: '\00ab';
+    left: 5px; }
+  .btn-arrow-l span:hover {
+    padding-left: 30px; }
+
+.back {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 30px;
+  margin-bottom: 7px;
+  margin-top: -7px; }
+
+.btn-secondary {
+  background-color: #343a40; }
+  .btn-secondary:hover {
+    background-color: #6c757d;
+    color: white;
+    border: 0; }
+
+.text-muted {
+  margin: 10px; }
+  .text-muted:hover {
+    color: white; }
+
+.layout {
+  margin-left: 20px; }
+
+hr {
+  background-color: #5cd1ff;
+  width: 100%;
+  height: 1px; }
+
+.pfp {
+  margin-right: 25px; }
+
+.btn-success {
+  background-color: white;
+  color: black; }
+  .btn-success.selected {
+    background-color: #28a745;
+    color: white; }
+
+.btn-danger {
+  background-color: white;
+  color: black; }
+  .btn-danger.selected {
+    background-color: #dc3545;
+    color: white; }
