@@ -91,9 +91,24 @@
     border: 0; }
 
 .text-muted {
-  margin: 10px; }
+  margin: 10px;
+  transition: 0.3s; }
   .text-muted:hover {
-    color: white; }
+    color: white;
+    cursor: pointer; }
+
+.left-half {
+  margin-top: 4px;
+  margin-left: 10% !important;
+  margin-bottom: 0; }
+
+.down {
+  margin-top: 10px; }
+
+.vote {
+  position: absolute;
+  margin-left: 90%;
+  margin-top: -1%; }
 
 .layout {
   margin-left: 20px; }

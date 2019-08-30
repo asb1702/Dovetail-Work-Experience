@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {Navbar, Nav, Image, Button} from 'react-bootstrap';
+
 class Navigation extends Component {
 
     state = {};
@@ -17,13 +18,14 @@ class Navigation extends Component {
                         <Image width="35%" className="logo"
                                src="https://live.dovetailgames.com/images/franchise_banner_live_tagline_2.png" fluid/>
                     </Navbar.Brand>
-                    <Nav.Link href="https://live.dovetailgames.com/auth/login?returnPath=/" className="text-muted left ">
+                    <Nav.Link href="https://live.dovetailgames.com/auth/login?returnPath=/"
+                              className="text-muted left ">
                         Log in to Dovetail Live
                     </Nav.Link>
                 </Navbar>
                 <Navbar sticky="top" className="header row" bg="dark" variant="dark">
                     <Nav className="mr-auto">
-                        <Nav.Link className="btn btn-secondary" href="#Home">Home</Nav.Link>
+                        <Nav.Link className="btn btn-secondary" href="/">Home</Nav.Link>
                         <Nav.Link className="btn btn-secondary" href="#Stats">Stats</Nav.Link>
                         <Nav.Link className="btn btn-secondary" href="#Games">Games</Nav.Link>
                         <Nav.Link className="btn btn-secondary" href="#Achievements">Achievements</Nav.Link>
