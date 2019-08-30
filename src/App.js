@@ -246,18 +246,18 @@ function videoContainer({match}) {
     if ( video ) {
         return (
             <React.Fragment>
-                <Col sm={8} flex-direction="column">
+                <Col sm={7} flex-direction="column">
                     <Link to="/">
                         <Button variant="primary  back btn-arrow btn-arrow-l"><span>Back</span></Button>
                     </Link>
                     <MainVideo data={video}/>
                 </Col>
-                <Col sm={4} flex-direction="column">
+                <Col sm={5} flex-direction="column">
                     <div className="row featured">
-                        <h4>Featured Content</h4>
+                        <h4>Similar Content</h4>
                         <Button variant="info" href="#More">More</Button>
                     </div>
-                    <SidebarVideoList videos={videos}/>
+                    <SidebarVideoList videos={videos} channel={video.channel}/>
                 </Col>
             </React.Fragment>
         );
@@ -272,7 +272,7 @@ function videoContainer({match}) {
             </Col>
             <Col sm={5} flex-direction="column">
                 <div className="row featured">
-                    <h4>Featured Content</h4>
+                    <h4>Similar Content</h4>
                     <Button variant="info" href="#More">More</Button>
                 </div>
                 <SidebarVideoList videos={videos}/>
@@ -284,19 +284,15 @@ function videoContainer({match}) {
 function indexComponent() {
     return (
         <React.Fragment>
-            <Col sm={7} flex-direction="column">
-                <Link to="/">
-                    <Button variant="primary  back btn-arrow btn-arrow-l"><span>Back</span></Button>
-                </Link>
-                <HomepageList/>
-            </Col>
-            <Col sm={5} flex-direction="column">
-                <div className="row featured">
-                    <h4>Featured Content</h4>
-                    <Button variant="info" href="#More">More</Button>
-                </div>
-                <SidebarVideoList videos={videos}/>
-            </Col>
+
+        <br/>
+            <h2>Featured Videos</h2>
+        <br/>
+        <br/>
+        <SidebarVideoList videos={videos} onlyFeatured={true}/>
+        <br/>
+            <h2>All Videos</h2>
+        <HomepageList videos={videos}/>
         </React.Fragment>
     );
 }
@@ -314,12 +310,13 @@ function App() {
             <div className="container-fluid">
                 <Navigation/>
                 <div className="row layout">
-                    <Switch>
+                        <Switch>
                         <Route path="/" exact component={indexComponent}/>
                         <Route path="/video/channels/:channelName" component={channelContainer}/>
                         <Route path="/video/:videoId" component={videoContainer}/>
                     </Switch>
-                </div>
+                    </div>
+
                 <Footer/>
             </div>
             {/*container end*/}

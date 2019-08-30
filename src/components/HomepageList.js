@@ -24,7 +24,6 @@ const HomepageList = ({ channel, videos }) => {
     let tiles = videos.map(v => <ChannelListItem  key={v.id} data={v}/>);
     return (
         <div>
-            <h2 className = "left-half">Home page thing?</h2>
             <br/>
             <br/>
             { tiles }

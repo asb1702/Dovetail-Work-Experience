@@ -18,7 +18,7 @@ class ChannelListItem extends Component {
 
     render() {
         return (
-            <span className = "float-left left-half">
+            <div className = "float-left left-half col col-4">
                 <Link to={`/video/${this.props.data.id}`}>
                     <Image className="vid" href="#Vid1" width="520px" height="300px" src={this.props.data.thumbnailUrl}/>
                     <h4>
@@ -30,7 +30,7 @@ class ChannelListItem extends Component {
                     {this.props.data.creator}
                     <span className = "left-half" style={{'fontSize': '30px'}}>↑</span>{this.props.data.votes}
                 </p>
-      </span>
+      </div>
         );
     }
 }

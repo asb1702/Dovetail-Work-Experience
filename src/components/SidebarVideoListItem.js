@@ -18,24 +18,24 @@ class SidebarVideoListItem extends Component {
 
     render() {
         return (
-            <span>
-                <Link to={`/video/${this.props.data.id}`}>
-                    <Image className="vid" href="#Vid1" width="500px" height="304px" src={this.props.data.thumbnailUrl}/>
-                    <h4>
-                        {this.props.data.title}
-                    </h4>
-                </Link>
-                <p><small>By: </small>
-                    {this.props.data.creator}
-                </p>
-                <p><small>Channel: </small>
-                    <Link to={`/video/channels/${this.props.data.channel}`}>
-                        {this.props.data.channel}
-                    </Link>
-                </p>
-                <p><span style={{'fontSize': '30px'}}>↑</span>{this.props.data.votes}</p>
-      </span>
-        );
+
+                    <div className = "col col-4">
+                        <Link to={`/video/${this.props.data.id}`}>
+                            <Image className="vid img-fluid" href="#Vid1" src={this.props.data.thumbnailUrl}/>
+                            <h4>
+                                {this.props.data.title}
+                            </h4>
+                        </Link>
+                        <p><small>By: </small>
+                            {this.props.data.creator}
+                        </p>
+                        <p><small>Channel: </small>
+                            <Link to={`/video/channels/${this.props.data.channel}`}>
+                                {this.props.data.channel}
+                            </Link>
+                        </p>
+                        <p><span style={{'fontSize': '30px'}}>↑</span>{this.props.data.votes}</p>
+              </div>);
     }
 }
 

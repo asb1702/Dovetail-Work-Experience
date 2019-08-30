@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import _ from "lodash";
 import SidebarVideoListItem from "./SidebarVideoListItem";
+import ChannelListItem from "./ChannelListItem";
 
 class SidebarVideoList extends Component {
 
@@ -11,7 +12,16 @@ class SidebarVideoList extends Component {
         const activeVideoId = window.location.pathname.split('/')[2];
         // Filter out the available videos to exclude the active video
         let videosToPrint = _.filter(this.props.videos, (video) => {
-            return video.id !== activeVideoId && video.isFeaturedItem == true;
+
+            console.log(this.props);
+            var isNotActive = activeVideoId === null || video.id !== activeVideoId;
+            console.log(this.props.hasOwnProperty("channel"));
+            var isInChannel = (!this.props.channel) || video.channel === this.props.channel;
+            console.log(isInChannel);
+            var isFeaturedItem = (!this.props.onlyFeatured) || video.isFeaturedItem == true;
+            console.log(isFeaturedItem);
+            return isNotActive && isInChannel && isFeaturedItem;
+            // return video.id !== activeVideoId && video.isFeaturedItem == true;
 
         });
 
@@ -20,20 +30,26 @@ class SidebarVideoList extends Component {
 
         // Limit the number of printed videos in the sidebar to just 3
         videosToPrint = videosToPrint.slice(0, 3);
-        return videosToPrint.map((video, i) => {
-            return (
-                <SidebarVideoListItem key={video.id} data={video}/>
-            )
-        })
+        return (
+            <div className="col-12">
+                <div className={'row'}>
+                    {videosToPrint.map((video, i) => {
+                        return (
+                            <SidebarVideoListItem key={video.id} data={video}/>
+                        )
+                    })}
+                </div>
+            </div>
+        )
     };
 
-render() {
-    return (
-        <span>
+    render() {
+        return (
+            <span>
                 {this.returnSidebarItems()}
             </span>
-    );
-}
+        );
+    }
 }
 
 SidebarVideoList.defaultProps = {
